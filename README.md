@@ -27,7 +27,7 @@ The published site is a dependency-free static website:
 - `index.html` — primary portfolio page
 - `styles.css` — responsive visual system
 - `404.html` — custom fallback page
-- existing technical figures and project reports — evidence assets retained from the previous version
+- `hamza.jpg`, `fig_convergence.png`, and the glider photograph — visual assets used by the page
 
 Open `index.html` directly or serve the repository with any static HTTP server.
 
