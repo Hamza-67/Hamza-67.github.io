@@ -26,8 +26,11 @@ The published site is a dependency-free static website:
 
 - `index.html` — primary portfolio page
 - `styles.css` — responsive visual system
+- `projects/` — detailed project case studies
+- `project.css` — shared case-study layout
 - `404.html` — custom fallback page
-- `hamza.jpg`, `fig_convergence.png`, and the glider photograph — visual assets used by the page
+- `assets/` — optimized experience and technical figures
+- `reports/` — selected public portfolio reports
 
 Open `index.html` directly or serve the repository with any static HTTP server.
 

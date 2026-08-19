@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assembly Routing Optimization — Hamza Houir Alami</title>
+  <meta name="description" content="Case study: constrained time-reduction allocation for an industrial assembly routing.">
+  <link rel="stylesheet" href="../styles.css?v=6"><link rel="stylesheet" href="../project.css?v=1">
+</head>
+<body class="project-page">
+  <header class="site-header"><a class="brand" href="../index.html"><span>HHA</span><strong>Hamza Houir Alami</strong></a><a class="project-back" href="../index.html#work">← All selected work</a></header>
+  <main class="case-shell">
+    <section class="case-hero">
+      <div class="case-eyebrow"><span>Industrial optimization · Case 01</span><span>2026</span></div>
+      <h1>Assembly Routing Time-Reduction Allocation</h1>
+      <p class="case-deck">A decision-support model for allocating a finite improvement target across heterogeneous assembly operations while respecting feasibility, quality risk, and operation-level reduction caps.</p>
+      <div class="case-links"><a class="button button-primary" href="#method">Explore the method <span>↓</span></a><a class="button button-secondary" href="mailto:h.houir.alami@gmail.com?subject=Assembly%20routing%20case%20study">Discuss the case <span>↗</span></a></div>
+    </section>
+    <section class="case-facts" aria-label="Project facts">
+      <div><span>Context</span><p>Aerospace assembly routing</p></div><div><span>My contribution</span><p>Model formulation, implementation, and validation</p></div><div><span>Methods</span><p>Convex allocation · SLSQP · Monte Carlo</p></div><div><span>Public data</span><p>Synthetic only; no production data</p></div>
+    </section>
+    <div class="case-body">
+      <nav class="case-toc" aria-label="Case study sections"><a href="#problem">Problem</a><a href="#method">Method</a><a href="#validation">Validation</a><a href="#limits">Limitations</a><a href="#evidence">Evidence</a></nav>
+      <div class="case-content">
+        <section class="case-section" id="problem"><span>01 / Problem</span><h2>Improvement capacity is limited — allocation should be explicit.</h2><p>Industrial routings contain operations with different durations, constraints, improvement potential, and quality exposure. A uniform percentage reduction ignores these differences and can produce recommendations that are infeasible or operationally unsafe.</p><p>The model therefore treats the total reduction target as a scarce resource to allocate, rather than assuming that every operation can absorb the same effort.</p></section>
+        <section class="case-section" id="method"><span>02 / Method</span><h2>A transparent constrained allocation model.</h2><p>Each operation receives a reduction variable <em>gᵢ</em>. The objective penalizes large relative reductions on sensitive or highly weighted operations while satisfying the total target and individual feasibility caps.</p><div class="case-equation">min Σ Wᵢ (gᵢ / Tᵢ)²<br>subject to Σgᵢ = G and 0 ≤ gᵢ ≤ capᵢ<small>Tᵢ: operation duration · Wᵢ: priority/risk weight · G: total improvement target · capᵢ: feasible reduction ceiling</small></div><ol><li>Structure the routing and define operation-specific features.</li><li>Construct a transparent weighted baseline.</li><li>Solve the constrained nonlinear problem with SLSQP.</li><li>Flag operations at or near their feasible caps.</li></ol></section>
+        <section class="case-section" id="validation"><span>03 / Validation</span><h2>Stress-tested under uncertainty, not presented as certainty.</h2><p>A 5,000-run Monte Carlo procedure perturbs the relevant assumptions and checks whether the recommended allocation remains feasible and structurally stable. The goal is not to claim a single exact answer, but to identify recommendations that remain defensible across plausible conditions.</p><div class="case-note"><strong>Confidentiality boundary</strong><p>The public case study reproduces the reasoning and mathematical structure using synthetic, representative inputs. It does not expose Safran production data, routing details, operation names, or proprietary thresholds.</p></div></section>
+        <section class="case-section" id="limits"><span>04 / Limitations</span><h2>The model supports engineering judgment; it does not replace it.</h2><ul><li>Weights and caps require expert review and should not be treated as objective facts.</li><li>Interactions between operations may require a richer model than separable penalties.</li><li>Implementation feasibility must be confirmed on the shop floor.</li><li>The public example cannot reproduce the confidential industrial dataset.</li></ul></section>
+        <section class="case-section" id="evidence"><span>05 / Evidence</span><h2>What can be shared publicly.</h2><div class="evidence-list"><div><span>Method</span><strong>Full formulation and validation logic documented on this page</strong><em>✓</em></div><div><span>Code &amp; report</span><strong>Not published because the industrial case is confidential</strong><em>—</em></div><a href="mailto:h.houir.alami@gmail.com?subject=Assembly%20routing%20case%20study"><span>Discussion</span><strong>Request a high-level walkthrough</strong><em>↗</em></a></div></section>
+        <a class="case-next" href="speech-recognition.html"><span>Next case study</span><strong>French Number Recognition →</strong></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

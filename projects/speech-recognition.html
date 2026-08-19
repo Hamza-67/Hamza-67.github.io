@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>French Number Recognition — Hamza Houir Alami</title>
+  <meta name="description" content="Case study: CNN-based French number recognition from 0 to 99 with constrained decoding.">
+  <link rel="stylesheet" href="../styles.css?v=6"><link rel="stylesheet" href="../project.css?v=1">
+</head>
+<body class="project-page">
+  <header class="site-header"><a class="brand" href="../index.html"><span>HHA</span><strong>Hamza Houir Alami</strong></a><a class="project-back" href="../index.html#work">← All selected work</a></header>
+  <main class="case-shell">
+    <section class="case-hero">
+      <div class="case-eyebrow"><span>Machine learning · Case 02</span><span>2026</span></div>
+      <h1>French Number Recognition from 0 to 99</h1>
+      <p class="case-deck">A speech-recognition system that learns reusable acoustic components with a CNN, then composes them into valid French numbers through silence segmentation and constrained linguistic decoding.</p>
+      <div class="case-links"><a class="button button-primary" href="#architecture">Explore the architecture <span>↓</span></a><a class="button button-secondary" href="mailto:h.houir.alami@gmail.com?subject=French%20number%20recognition%20project">Request project material <span>↗</span></a></div>
+    </section>
+    <section class="case-facts" aria-label="Project facts">
+      <div><span>Output space</span><p>French numbers 0–99</p></div><div><span>Acoustic vocabulary</span><p>23 reusable components</p></div><div><span>Representation</span><p>64-bin mel spectrograms</p></div><div><span>Core idea</span><p>Acoustics separated from grammar</p></div>
+    </section>
+    <div class="case-body">
+      <nav class="case-toc" aria-label="Case study sections"><a href="#problem">Problem</a><a href="#architecture">Architecture</a><a href="#validation">Validation</a><a href="#limits">Limitations</a><a href="#evidence">Evidence</a></nav>
+      <div class="case-content">
+        <section class="case-section" id="problem"><span>01 / Problem</span><h2>Recognizing 100 labels directly wastes the structure of the language.</h2><p>French numbers are compositional: many outputs reuse the same acoustic elements, while their order is governed by grammar. Treating every number from 0 to 99 as an independent class requires more data and ignores this reusable structure.</p><p>The project instead learns atomic spoken components and delegates valid composition to an explicit decoder.</p></section>
+        <section class="case-section" id="architecture"><span>02 / Architecture</span><h2>A hybrid acoustic and linguistic pipeline.</h2><div class="case-pipeline" aria-label="Speech recognition pipeline"><span>16 kHz audio</span><i>→</i><span>Silence segmentation</span><i>→</i><span>64-bin mel</span><i>→</i><span>CNN components</span><i>→</i><span>Constrained decoder</span></div><h3>Acoustic model</h3><p>Audio is converted into normalized mel spectrograms. A convolutional neural network predicts atomic number components rather than complete 0–99 labels.</p><h3>Constrained decoding</h3><p>The decoder maps predicted component sequences to valid French numbers and rejects combinations that violate the supported grammar. For example, a sequence corresponding to <em>quatre · vingt · dix · sept</em> is composed into 97.</p></section>
+        <section class="case-section" id="validation"><span>03 / Validation</span><h2>Evaluation separates classification from composition.</h2><p>The experimental protocol uses a held-out split and checks performance at multiple levels: component classification, complete-number decoding, confusion patterns, and behavior on speakers not represented in the training subset.</p><ul><li>Early stopping controls overfitting during CNN training.</li><li>Confusion matrices identify acoustically similar components.</li><li>Decoder errors are separated from acoustic-model errors.</li><li>Speaker generalization is treated as a distinct test, not assumed from aggregate accuracy.</li></ul></section>
+        <section class="case-section" id="limits"><span>04 / Limitations</span><h2>Small-data speech recognition remains sensitive to recording conditions.</h2><ul><li>The dataset is limited in speakers, accents, microphones, and acoustic environments.</li><li>Silence-based segmentation can fail with rapid or connected speech.</li><li>A constrained grammar improves validity but cannot repair every acoustic error.</li><li>The architecture is designed for the bounded 0–99 task, not unrestricted speech recognition.</li></ul></section>
+        <section class="case-section" id="evidence"><span>05 / Evidence</span><h2>Project material.</h2><div class="evidence-list"><div><span>Architecture</span><strong>Pipeline and decoding logic documented on this page</strong><em>✓</em></div><div><span>Repository</span><strong>Code cleanup and public release in preparation</strong><em>—</em></div><a href="mailto:h.houir.alami@gmail.com?subject=French%20number%20recognition%20project"><span>Technical material</span><strong>Request the report or a walkthrough</strong><em>↗</em></a></div></section>
+        <a class="case-next" href="flywheel.html"><span>Next case study</span><strong>Flywheel Shape Optimization →</strong></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

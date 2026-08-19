@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hamza-67.github.io/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url><loc>https://hamza-67.github.io/projects/assembly-routing.html</loc><lastmod>2026-08-19</lastmod></url>
+  <url><loc>https://hamza-67.github.io/projects/speech-recognition.html</loc><lastmod>2026-08-19</lastmod></url>
+  <url><loc>https://hamza-67.github.io/projects/flywheel.html</loc><lastmod>2026-08-19</lastmod></url>
+  <url><loc>https://hamza-67.github.io/projects/thepnlab.html</loc><lastmod>2026-08-19</lastmod></url>
+  <url><loc>https://hamza-67.github.io/projects/glider.html</loc><lastmod>2026-08-19</lastmod></url>
 </urlset>

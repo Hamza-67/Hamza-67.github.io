@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThePnLab — Hamza Houir Alami</title>
+  <meta name="description" content="Case study: full-stack paper-trading and decision-support platform.">
+  <link rel="stylesheet" href="../styles.css?v=6"><link rel="stylesheet" href="../project.css?v=1">
+</head>
+<body class="project-page">
+  <header class="site-header"><a class="brand" href="../index.html"><span>HHA</span><strong>Hamza Houir Alami</strong></a><a class="project-back" href="../index.html#work">← All selected work</a></header>
+  <main class="case-shell">
+    <section class="case-hero">
+      <div class="case-eyebrow"><span>Decision software · Case 04</span><span>2026</span></div>
+      <h1>ThePnLab</h1>
+      <p class="case-deck">A full-stack paper-trading platform built around portfolios, positions, scheduled decision cycles, derivatives logic, and an explainable coaching layer.</p>
+      <div class="case-links"><a class="button button-primary" href="https://github.com/Hamza-67/ThePnLab" target="_blank" rel="noreferrer">GitHub repository <span>↗</span></a><a class="button button-secondary" href="../reports/thepnlab-portfolio-report.pdf" target="_blank">Portfolio report <span>↗</span></a><a class="text-link" href="https://thepnlab.com" target="_blank" rel="noreferrer">Live product ↗</a></div>
+    </section>
+    <section class="case-facts" aria-label="Project facts">
+      <div><span>Role</span><p>Sole founder and developer</p></div><div><span>Backend</span><p>FastAPI · PostgreSQL</p></div><div><span>Frontend</span><p>React · responsive product UI</p></div><div><span>Decision cycle</span><p>Scheduled every 30 minutes</p></div>
+    </section>
+    <div class="case-body">
+      <nav class="case-toc" aria-label="Case study sections"><a href="#problem">Problem</a><a href="#architecture">Architecture</a><a href="#risk">Risk logic</a><a href="#coach">Coach</a><a href="#evidence">Evidence</a></nav>
+      <div class="case-content">
+        <section class="case-section" id="problem"><span>01 / Product problem</span><h2>Paper trading should explain decisions, not only replay prices.</h2><p>Many simulation products focus on order entry and portfolio value. ThePnLab was designed around the broader decision loop: screening, portfolio state, position sizing, execution, risk monitoring, and post-decision explanation.</p><figure class="case-figure"><img src="../assets/thepnlab-cover.jpg" alt="ThePnLab product identity"><figcaption>ThePnLab — algorithmic trading simulation and decision-support platform.</figcaption></figure></section>
+        <section class="case-section" id="architecture"><span>02 / Architecture</span><h2>A modular full-stack system.</h2><div class="case-pipeline" aria-label="ThePnLab product architecture"><span>Market data</span><i>→</i><span>Decision cycle</span><i>→</i><span>Execution</span><i>→</i><span>Portfolio state</span><i>→</i><span>Coach</span></div><ul><li>FastAPI routers separate authentication, market, portfolio, replay, bot, and coaching concerns.</li><li>PostgreSQL models persist users, portfolios, positions, and operational state.</li><li>A React frontend organizes market, portfolio, leaderboard, replay, and settings workflows.</li><li>Tests cover authentication, schedules, portfolio behavior, margin logic, derivatives, and system metrics.</li></ul></section>
+        <section class="case-section" id="risk"><span>03 / Portfolio and risk logic</span><h2>Positions are modeled as constrained state, not isolated trades.</h2><p>The backend includes portfolio accounting, position lifecycle, margin and liquidation logic, overnight handling, and take-profit / stop-loss monitoring. This makes the application a systems project as much as a user-interface project.</p><div class="case-note"><strong>Simulation boundary</strong><p>ThePnLab is an educational paper-trading product. It does not execute real-money orders and should not be interpreted as investment advice.</p></div></section>
+        <section class="case-section" id="coach"><span>04 / Explainable coaching</span><h2>A retrieval-assisted layer turns system state into feedback.</h2><p>The coaching layer combines portfolio context with a curated knowledge base to explain decisions and surface learning points. The design goal is traceability: feedback should be linked to observable state and documented concepts rather than presented as an opaque recommendation.</p></section>
+        <section class="case-section" id="evidence"><span>05 / Evidence</span><h2>Code, report, and product.</h2><div class="evidence-list"><a href="https://github.com/Hamza-67/ThePnLab" target="_blank" rel="noreferrer"><span>Repository</span><strong>Backend, frontend, migrations, and test suite</strong><em>↗</em></a><a href="../reports/thepnlab-portfolio-report.pdf" target="_blank"><span>Portfolio report</span><strong>Concise architecture and product overview</strong><em>↗</em></a><a href="https://thepnlab.com" target="_blank" rel="noreferrer"><span>Live product</span><strong>Public product experience</strong><em>↗</em></a></div></section>
+        <a class="case-next" href="glider.html"><span>Next engineering study</span><strong>Glider Wing Analysis →</strong></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

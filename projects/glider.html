@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glider Wing Analysis — Hamza Houir Alami</title>
+  <meta name="description" content="Case study: aerodynamic and structural analysis of a glider wing.">
+  <link rel="stylesheet" href="../styles.css?v=6"><link rel="stylesheet" href="../project.css?v=1">
+</head>
+<body class="project-page">
+  <header class="site-header"><a class="brand" href="../index.html"><span>HHA</span><strong>Hamza Houir Alami</strong></a><a class="project-back" href="../index.html#work">← All selected work</a></header>
+  <main class="case-shell">
+    <section class="case-hero">
+      <div class="case-eyebrow"><span>Aerodynamics &amp; structures · Engineering study</span><span>2025–2026</span></div>
+      <h1>Glider Wing Aerodynamic &amp; Structural Analysis</h1>
+      <p class="case-deck">A coupled engineering study moving from analytical wing sizing to CFD and finite-element verification, completed in collaboration with Étienne Roy.</p>
+      <div class="case-links"><a class="button button-primary" href="../reports/glider-report.pdf" target="_blank">English report <span>↗</span></a><a class="button button-secondary" href="#method">Explore the method <span>↓</span></a></div>
+    </section>
+    <section class="case-facts" aria-label="Project facts">
+      <div><span>Aircraft model</span><p>Glider wing · Clark Y airfoil</p></div><div><span>Aerodynamics</span><p>Prandtl lifting-line · STAR-CCM+</p></div><div><span>Structures</span><p>Abaqus finite-element analysis</p></div><div><span>Contribution</span><p>Modeling, simulation, and reporting</p></div>
+    </section>
+    <div class="case-body">
+      <nav class="case-toc" aria-label="Case study sections"><a href="#problem">Problem</a><a href="#method">Method</a><a href="#cfd">CFD</a><a href="#fea">FEA</a><a href="#evidence">Evidence</a></nav>
+      <div class="case-content">
+        <section class="case-section" id="problem"><span>01 / Problem</span><h2>Size a wing that is aerodynamically credible and structurally defensible.</h2><p>The project connects multiple levels of fidelity. Analytical tools establish first-order geometry and loading, CFD checks the flow field and aerodynamic coefficients, and finite-element analysis tests the structural response under the resulting load cases.</p></section>
+        <section class="case-section" id="method"><span>02 / Method</span><h2>A staged verification workflow.</h2><div class="case-pipeline" aria-label="Glider analysis workflow"><span>Requirements</span><i>→</i><span>Wing sizing</span><i>→</i><span>Lifting-line</span><i>→</i><span>CFD</span><i>→</i><span>FEA</span></div><ol><li>Select the airfoil and define reference geometry and flight conditions.</li><li>Use Prandtl lifting-line theory for spanwise loading and first-order performance.</li><li>Build a STAR-CCM+ CFD case for pressure and flow-field analysis.</li><li>Transfer representative loading to an Abaqus structural model.</li><li>Compare results across methods and document modeling limits.</li></ol></section>
+        <section class="case-section" id="cfd"><span>03 / CFD</span><h2>Numerical flow analysis around the selected airfoil.</h2><figure class="case-figure"><img src="../assets/glider-cfd.png" alt="CFD pressure field around the glider airfoil"><figcaption>STAR-CCM+ pressure field around the selected airfoil under the documented simulation conditions.</figcaption></figure><p>The CFD stage provides a more detailed view of the pressure distribution and wake than the analytical model, while remaining dependent on mesh quality, turbulence modeling, and boundary-condition choices.</p></section>
+        <section class="case-section" id="fea"><span>04 / Structural analysis</span><h2>Finite-element verification of the wing structure.</h2><figure class="case-figure"><img src="../assets/glider-fea.png" alt="Abaqus stress field for the glider wing"><figcaption>Abaqus equivalent-stress field for the structural load case.</figcaption></figure><p>The finite-element model checks stress distribution and deformation under representative aerodynamic loading. Results are interpreted with attention to boundary-condition idealization and material assumptions.</p></section>
+        <section class="case-section" id="evidence"><span>05 / Evidence</span><h2>Technical report.</h2><div class="evidence-list"><a href="../reports/glider-report.pdf" target="_blank"><span>English report</span><strong>Aerodynamic analysis, structural dimensioning, results, and limitations</strong><em>↗</em></a><div><span>Collaboration</span><strong>Completed with Étienne Roy; supervisors credited in the report</strong><em>✓</em></div></div></section>
+        <a class="case-next" href="assembly-routing.html"><span>Return to first case</span><strong>Assembly Routing Optimization →</strong></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

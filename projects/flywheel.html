@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flywheel Shape Optimization — Hamza Houir Alami</title>
+  <meta name="description" content="Case study: analytical, numerical, and experimental flywheel shape optimization.">
+  <link rel="stylesheet" href="../styles.css?v=6"><link rel="stylesheet" href="../project.css?v=1">
+</head>
+<body class="project-page">
+  <header class="site-header"><a class="brand" href="../index.html"><span>HHA</span><strong>Hamza Houir Alami</strong></a><a class="project-back" href="../index.html#work">← All selected work</a></header>
+  <main class="case-shell">
+    <section class="case-hero">
+      <div class="case-eyebrow"><span>Constrained shape optimization · Case 03</span><span>2024–2025</span></div>
+      <h1>Flywheel Shape Optimization</h1>
+      <p class="case-deck">A reproducible study connecting analytical bounds, numerical parameterizations, solver convergence, and small-scale experimental validation to maximize rotational inertia under geometric constraints.</p>
+      <div class="case-links"><a class="button button-primary" href="https://github.com/Hamza-67/flywheel-shape-optimization" target="_blank" rel="noreferrer">GitHub repository <span>↗</span></a><a class="button button-secondary" href="https://github.com/Hamza-67/flywheel-shape-optimization/blob/main/reports/portfolio_report.pdf" target="_blank" rel="noreferrer">Portfolio report <span>↗</span></a></div>
+    </section>
+    <section class="case-facts" aria-label="Project facts">
+      <div><span>Objective</span><p>Maximize moment of inertia</p></div><div><span>Parameterizations</span><p>Fourier · polynomial · polar · 3D</p></div><div><span>Solvers</span><p>L-BFGS-B · trust region</p></div><div><span>Validation</span><p>Analytical · numerical · experimental</p></div>
+    </section>
+    <div class="case-body">
+      <nav class="case-toc" aria-label="Case study sections"><a href="#problem">Problem</a><a href="#method">Method</a><a href="#results">Results</a><a href="#experiment">Experiment</a><a href="#evidence">Evidence</a></nav>
+      <div class="case-content">
+        <section class="case-section" id="problem"><span>01 / Problem</span><h2>Where should a fixed amount of material be placed?</h2><p>For a flywheel of fixed mass and admissible dimensions, stored rotational energy increases with moment of inertia. The optimization question is therefore geometric: redistribute material away from the rotation axis while satisfying area, radius, manufacturability, and regularity constraints.</p><div class="case-equation">E = ½ Iω² &nbsp;&nbsp; and &nbsp;&nbsp; I = ∫ r² dm<small>At fixed angular speed, improving the mass distribution increases stored rotational energy through the inertia term.</small></div></section>
+        <section class="case-section" id="method"><span>02 / Method</span><h2>Multiple representations, one physical objective.</h2><p>The geometry was expressed through complementary parameterizations to compare numerical behavior rather than relying on a single solver configuration.</p><ul><li>Analytical reference cases establish interpretable upper and lower bounds.</li><li>Fourier and polynomial descriptions provide smooth low-dimensional shapes.</li><li>Polar and 3D formulations test more general geometries.</li><li>Bounded and trust-region solvers are compared through convergence and constraint satisfaction.</li></ul><figure class="case-figure"><img src="../assets/flywheel-shapes.png" alt="Comparison of ring and disk inertia scaling"><figcaption>Analytical reference: concentrating mass near the outer radius increases inertia. Figure generated for the public repository.</figcaption></figure></section>
+        <section class="case-section" id="results"><span>03 / Numerical results</span><h2>Convergence is evaluated, not assumed.</h2><figure class="case-figure"><img src="../fig_convergence.png" alt="Comparison of numerical convergence methods for flywheel optimization"><figcaption>Comparison of numerical convergence across parameterizations and solvers.</figcaption></figure><p>The analysis compares objective improvement, convergence speed, sensitivity to initialization, and constraint compliance. The project documents both successful configurations and solver behavior that is numerically unstable or physically unhelpful.</p></section>
+        <section class="case-section" id="experiment"><span>04 / Experiment</span><h2>A miniature vehicle connects the model to observable motion.</h2><p>Two configurations were compared using tracked trajectories. The experiment is deliberately modest: it tests whether the predicted physical direction is visible, not whether a small apparatus proves a universal performance gain.</p><figure class="case-figure"><img src="../assets/flywheel-tracker.webp" alt="Motion tracking used for the flywheel experiment"><figcaption>Trajectory extraction used to compare the miniature vehicle configurations.</figcaption></figure><div class="case-note"><strong>Interpretation boundary</strong><p>The experiment is affected by rolling resistance, alignment, release conditions, and measurement uncertainty. These factors are documented rather than hidden behind a single headline metric.</p></div></section>
+        <section class="case-section" id="evidence"><span>05 / Evidence</span><h2>Reproducible repository.</h2><div class="evidence-list"><a href="https://github.com/Hamza-67/flywheel-shape-optimization" target="_blank" rel="noreferrer"><span>Repository</span><strong>Source code, tests, data dictionary, and reproducibility scripts</strong><em>↗</em></a><a href="https://github.com/Hamza-67/flywheel-shape-optimization/blob/main/reports/portfolio_report.pdf" target="_blank" rel="noreferrer"><span>Portfolio report</span><strong>Concise English technical report</strong><em>↗</em></a><a href="https://github.com/Hamza-67/flywheel-shape-optimization/blob/main/reports/technical_report.pdf" target="_blank" rel="noreferrer"><span>Technical report</span><strong>Detailed modeling and validation document</strong><em>↗</em></a></div></section>
+        <a class="case-next" href="thepnlab.html"><span>Next case study</span><strong>ThePnLab →</strong></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
