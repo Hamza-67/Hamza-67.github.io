@@ -14,7 +14,6 @@ Selected work is intentionally limited to projects with a clear problem, individ
 
 ## Selected work
 
-- Assembly routing time-reduction allocation
 - French number recognition from 0 to 99
 - Flywheel shape optimization
 - ThePnLab decision-support platform
