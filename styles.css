@@ -31,6 +31,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-header nav { display: flex; align-items: center; gap: 30px; }
 .site-header nav a { font-size: 12px; font-weight: 700; color: var(--ink-soft); }
 .site-header nav a:hover { color: var(--navy); }
+.language-switch { padding: 4px; display: inline-flex; align-items: center; gap: 2px; border: 1px solid rgba(13,41,64,.28); }
+.site-header nav .language-switch a { min-width: 30px; padding: 6px 7px; text-align: center; color: var(--ink-soft); font-size: 9px; letter-spacing: .08em; }
+.site-header nav .language-switch a.active { color: white; background: var(--navy); }
 .site-header .nav-contact { padding: 10px 17px; border: 1px solid var(--navy); color: var(--navy); }
 .site-header .nav-contact:hover { color: white; background: var(--navy); }
 
@@ -164,6 +167,8 @@ footer a { color: white; }
   .brand strong { display: none; }
   .site-header nav { gap: 16px; }
   .site-header nav a:not(.nav-contact) { display: none; }
+  .site-header nav .language-switch a { display: block; }
+  .site-header nav { gap: 9px; }
   .site-header .nav-contact { padding: 8px 14px; }
   .hero { min-height: auto; padding: 70px 22px 75px; grid-template-columns: 1fr; gap: 52px; }
   .hero h1 { font-size: clamp(48px,15vw,70px); }

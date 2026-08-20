@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThePnLab — Hamza Houir Alami</title>
+  <meta name="description" content="Étude de cas : plateforme full-stack de simulation financière et d’aide à la décision.">
+  <link rel="alternate" hreflang="en" href="https://hamza-67.github.io/projects/thepnlab.html"><link rel="alternate" hreflang="fr" href="https://hamza-67.github.io/fr/projects/thepnlab.html">
+  <link rel="stylesheet" href="../../styles.css?v=7"><link rel="stylesheet" href="../../project.css?v=2">
+</head>
+<body class="project-page">
+  <header class="site-header"><a class="brand" href="../index.html"><span>HHA</span><strong>Hamza Houir Alami</strong></a><div class="project-header-actions"><a class="project-back" href="../index.html#work">← Tous les projets</a><span class="language-switch" aria-label="Langue"><a href="/projects/thepnlab.html" lang="en">EN</a><a class="active" href="/fr/projects/thepnlab.html" aria-current="page">FR</a></span></div></header>
+  <main class="case-shell">
+    <section class="case-hero">
+      <div class="case-eyebrow"><span>Logiciel d’aide à la décision · Étude 03</span><span>2026</span></div>
+      <h1>ThePnLab</h1>
+      <p class="case-deck">Une plateforme full-stack de paper trading structurée autour des portefeuilles, des positions, de cycles de décision planifiés, de la logique sur produits dérivés et d’une couche de coaching explicable.</p>
+      <div class="case-links"><a class="button button-primary" href="https://github.com/Hamza-67/ThePnLab" target="_blank" rel="noreferrer">Dépôt GitHub <span>↗</span></a><a class="button button-secondary" href="../../reports/thepnlab-portfolio-report.pdf" target="_blank">Rapport portfolio <span>↗</span></a><a class="text-link" href="https://thepnlab.com" target="_blank" rel="noreferrer">Produit en ligne ↗</a></div>
+    </section>
+    <section class="case-facts" aria-label="Informations sur le projet">
+      <div><span>Rôle</span><p>Fondateur et développeur unique</p></div><div><span>Backend</span><p>FastAPI · PostgreSQL</p></div><div><span>Frontend</span><p>React · interface responsive</p></div><div><span>Cycle de décision</span><p>Planifié toutes les 30 minutes</p></div>
+    </section>
+    <div class="case-body">
+      <nav class="case-toc" aria-label="Sections de l’étude"><a href="#problem">Problème</a><a href="#architecture">Architecture</a><a href="#risk">Risque</a><a href="#coach">Coach</a><a href="#evidence">Preuves</a></nav>
+      <div class="case-content">
+        <section class="case-section" id="problem"><span>01 / Problème produit</span><h2>Le paper trading doit expliquer les décisions, pas seulement reproduire les prix.</h2><p>De nombreux simulateurs se limitent à la saisie d’ordres et à la valeur du portefeuille. ThePnLab a été conçu autour de la boucle décisionnelle complète : sélection, état du portefeuille, dimensionnement des positions, exécution, suivi du risque et explication a posteriori.</p><figure class="case-figure"><img src="../../assets/thepnlab-cover.jpg" alt="Identité visuelle de ThePnLab"><figcaption>ThePnLab — plateforme de simulation de trading algorithmique et d’aide à la décision.</figcaption></figure></section>
+        <section class="case-section" id="architecture"><span>02 / Architecture</span><h2>Un système full-stack modulaire.</h2><div class="case-pipeline" aria-label="Architecture de ThePnLab"><span>Données de marché</span><i>→</i><span>Cycle de décision</span><i>→</i><span>Exécution</span><i>→</i><span>État du portefeuille</span><i>→</i><span>Coach</span></div><ul><li>Les routeurs FastAPI séparent authentification, marché, portefeuille, replay, bot et coaching.</li><li>Les modèles PostgreSQL conservent utilisateurs, portefeuilles, positions et état opérationnel.</li><li>Le frontend React organise les parcours marché, portefeuille, classement, replay et paramètres.</li><li>Les tests couvrent authentification, planification, comportement du portefeuille, marges, dérivés et métriques système.</li></ul></section>
+        <section class="case-section" id="risk"><span>03 / Portefeuille et risque</span><h2>Les positions sont modélisées comme un état contraint, pas comme des opérations isolées.</h2><p>Le backend comprend la comptabilité du portefeuille, le cycle de vie des positions, les marges et liquidations, la gestion overnight et le suivi des seuils take-profit / stop-loss. L’application constitue ainsi un projet système autant qu’un projet d’interface.</p><div class="case-note"><strong>Limite de la simulation</strong><p>ThePnLab est un produit éducatif de paper trading. Il n’exécute aucun ordre en argent réel et ne constitue pas un conseil en investissement.</p></div></section>
+        <section class="case-section" id="coach"><span>04 / Coaching explicable</span><h2>Une couche assistée par recherche transforme l’état du système en retour pédagogique.</h2><p>La couche de coaching combine le contexte du portefeuille à une base de connaissances sélectionnée afin d’expliquer les décisions et de faire ressortir les points d’apprentissage. L’objectif est la traçabilité : les retours doivent être reliés à un état observable et à des concepts documentés, plutôt que présentés comme des recommandations opaques.</p></section>
+        <section class="case-section" id="evidence"><span>05 / Preuves</span><h2>Code, rapport et produit.</h2><div class="evidence-list"><a href="https://github.com/Hamza-67/ThePnLab" target="_blank" rel="noreferrer"><span>Dépôt</span><strong>Backend, frontend, migrations et suite de tests</strong><em>↗</em></a><a href="../../reports/thepnlab-portfolio-report.pdf" target="_blank"><span>Rapport portfolio</span><strong>Présentation synthétique de l’architecture et du produit</strong><em>↗</em></a><a href="https://thepnlab.com" target="_blank" rel="noreferrer"><span>Produit en ligne</span><strong>Expérience produit publique</strong><em>↗</em></a></div></section>
+        <a class="case-next" href="glider.html"><span>Étude suivante</span><strong>Analyse d’une aile de planeur →</strong></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

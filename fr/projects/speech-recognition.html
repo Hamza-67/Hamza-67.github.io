@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reconnaissance des nombres français — Hamza Houir Alami</title>
+  <meta name="description" content="Étude de cas : reconnaissance vocale des nombres français de 0 à 99 par CNN et décodage contraint.">
+  <link rel="alternate" hreflang="en" href="https://hamza-67.github.io/projects/speech-recognition.html"><link rel="alternate" hreflang="fr" href="https://hamza-67.github.io/fr/projects/speech-recognition.html">
+  <link rel="stylesheet" href="../../styles.css?v=7"><link rel="stylesheet" href="../../project.css?v=2">
+</head>
+<body class="project-page">
+  <header class="site-header"><a class="brand" href="../index.html"><span>HHA</span><strong>Hamza Houir Alami</strong></a><div class="project-header-actions"><a class="project-back" href="../index.html#work">← Tous les projets</a><span class="language-switch" aria-label="Langue"><a href="/projects/speech-recognition.html" lang="en">EN</a><a class="active" href="/fr/projects/speech-recognition.html" aria-current="page">FR</a></span></div></header>
+  <main class="case-shell">
+    <section class="case-hero">
+      <div class="case-eyebrow"><span>Apprentissage automatique · Étude 01</span><span>2026</span></div>
+      <h1>Reconnaissance des nombres français de 0 à 99</h1>
+      <p class="case-deck">Un système de reconnaissance vocale qui apprend des composants acoustiques réutilisables avec un CNN, puis les compose en nombres français valides grâce à la segmentation des silences et à un décodage linguistique contraint.</p>
+      <div class="case-links"><a class="button button-primary" href="#architecture">Explorer l’architecture <span>↓</span></a><a class="button button-secondary" href="mailto:h.houir.alami@gmail.com?subject=Projet%20reconnaissance%20des%20nombres%20francais">Demander les documents <span>↗</span></a></div>
+    </section>
+    <section class="case-facts" aria-label="Informations sur le projet">
+      <div><span>Sorties</span><p>Nombres français de 0 à 99</p></div><div><span>Vocabulaire acoustique</span><p>23 composants réutilisables</p></div><div><span>Représentation</span><p>Spectrogrammes mel à 64 bandes</p></div><div><span>Idée centrale</span><p>Séparer acoustique et grammaire</p></div>
+    </section>
+    <div class="case-body">
+      <nav class="case-toc" aria-label="Sections de l’étude"><a href="#problem">Problème</a><a href="#architecture">Architecture</a><a href="#validation">Validation</a><a href="#limits">Limites</a><a href="#evidence">Preuves</a></nav>
+      <div class="case-content">
+        <section class="case-section" id="problem"><span>01 / Problème</span><h2>Reconnaître directement 100 classes revient à ignorer la structure de la langue.</h2><p>Les nombres français sont compositionnels : de nombreuses sorties réutilisent les mêmes éléments acoustiques, tandis que leur ordre est gouverné par la grammaire. Considérer chaque nombre de 0 à 99 comme une classe indépendante demande davantage de données et néglige cette structure.</p><p>Le projet apprend donc des composants parlés élémentaires et confie leur composition valide à un décodeur explicite.</p></section>
+        <section class="case-section" id="architecture"><span>02 / Architecture</span><h2>Un pipeline hybride, acoustique et linguistique.</h2><div class="case-pipeline" aria-label="Pipeline de reconnaissance vocale"><span>Audio 16 kHz</span><i>→</i><span>Segmentation des silences</span><i>→</i><span>Mel 64 bandes</span><i>→</i><span>Composants CNN</span><i>→</i><span>Décodeur contraint</span></div><h3>Modèle acoustique</h3><p>L’audio est transformé en spectrogrammes mel normalisés. Un réseau de neurones convolutif prédit des composants numériques élémentaires plutôt que des classes complètes de 0 à 99.</p><h3>Décodage contraint</h3><p>Le décodeur associe les séquences prédites à des nombres français valides et rejette les combinaisons qui ne respectent pas la grammaire prise en charge. Par exemple, la séquence <em>quatre · vingt · dix · sept</em> est recomposée en 97.</p></section>
+        <section class="case-section" id="validation"><span>03 / Validation</span><h2>L’évaluation distingue classification et composition.</h2><p>Le protocole utilise un jeu de test séparé et évalue plusieurs niveaux : classification des composants, décodage des nombres complets, schémas de confusion et comportement sur des locuteurs absents du sous-ensemble d’entraînement.</p><ul><li>L’early stopping limite le surapprentissage pendant l’entraînement.</li><li>Les matrices de confusion révèlent les composants acoustiquement proches.</li><li>Les erreurs du décodeur sont séparées de celles du modèle acoustique.</li><li>La généralisation à de nouveaux locuteurs est testée séparément.</li></ul></section>
+        <section class="case-section" id="limits"><span>04 / Limites</span><h2>La reconnaissance vocale avec peu de données reste sensible aux conditions d’enregistrement.</h2><ul><li>Le jeu de données reste limité en locuteurs, accents, microphones et environnements.</li><li>La segmentation par silence peut échouer sur une parole rapide ou liée.</li><li>Une grammaire contrainte améliore la validité sans corriger toutes les erreurs acoustiques.</li><li>L’architecture cible le domaine borné 0–99, pas la reconnaissance vocale générale.</li></ul></section>
+        <section class="case-section" id="evidence"><span>05 / Preuves</span><h2>Documents du projet.</h2><div class="evidence-list"><div><span>Architecture</span><strong>Pipeline et logique de décodage documentés sur cette page</strong><em>✓</em></div><div><span>Dépôt</span><strong>Nettoyage du code et publication en préparation</strong><em>—</em></div><a href="mailto:h.houir.alami@gmail.com?subject=Projet%20reconnaissance%20des%20nombres%20francais"><span>Documents techniques</span><strong>Demander le rapport ou une présentation détaillée</strong><em>↗</em></a></div></section>
+        <a class="case-next" href="flywheel.html"><span>Projet suivant</span><strong>Optimisation du volant d’inertie →</strong></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Optimisation d’un volant d’inertie — Hamza Houir Alami</title>
+  <meta name="description" content="Étude de cas : optimisation analytique, numérique et expérimentale de la forme d’un volant d’inertie.">
+  <link rel="alternate" hreflang="en" href="https://hamza-67.github.io/projects/flywheel.html"><link rel="alternate" hreflang="fr" href="https://hamza-67.github.io/fr/projects/flywheel.html">
+  <link rel="stylesheet" href="../../styles.css?v=7"><link rel="stylesheet" href="../../project.css?v=2">
+</head>
+<body class="project-page">
+  <header class="site-header"><a class="brand" href="../index.html"><span>HHA</span><strong>Hamza Houir Alami</strong></a><div class="project-header-actions"><a class="project-back" href="../index.html#work">← Tous les projets</a><span class="language-switch" aria-label="Langue"><a href="/projects/flywheel.html" lang="en">EN</a><a class="active" href="/fr/projects/flywheel.html" aria-current="page">FR</a></span></div></header>
+  <main class="case-shell">
+    <section class="case-hero">
+      <div class="case-eyebrow"><span>Optimisation de forme sous contraintes · Étude 02</span><span>2024–2025</span></div>
+      <h1>Optimisation de la forme d’un volant d’inertie</h1>
+      <p class="case-deck">Une étude reproductible reliant bornes analytiques, paramétrisations numériques, convergence des solveurs et validation expérimentale à petite échelle pour maximiser l’inertie sous contraintes géométriques.</p>
+      <div class="case-links"><a class="button button-primary" href="https://github.com/Hamza-67/flywheel-shape-optimization" target="_blank" rel="noreferrer">Dépôt GitHub <span>↗</span></a><a class="button button-secondary" href="https://github.com/Hamza-67/flywheel-shape-optimization/blob/main/reports/portfolio_report.pdf" target="_blank" rel="noreferrer">Rapport portfolio <span>↗</span></a></div>
+    </section>
+    <section class="case-facts" aria-label="Informations sur le projet">
+      <div><span>Objectif</span><p>Maximiser le moment d’inertie</p></div><div><span>Paramétrisations</span><p>Fourier · polynomiale · polaire · 3D</p></div><div><span>Solveurs</span><p>L-BFGS-B · région de confiance</p></div><div><span>Validation</span><p>Analytique · numérique · expérimentale</p></div>
+    </section>
+    <div class="case-body">
+      <nav class="case-toc" aria-label="Sections de l’étude"><a href="#problem">Problème</a><a href="#method">Méthode</a><a href="#results">Résultats</a><a href="#experiment">Expérience</a><a href="#evidence">Preuves</a></nav>
+      <div class="case-content">
+        <section class="case-section" id="problem"><span>01 / Problème</span><h2>Où placer une quantité fixe de matière ?</h2><p>Pour un volant de masse et de dimensions imposées, l’énergie cinétique de rotation augmente avec le moment d’inertie. Le problème est donc géométrique : éloigner la matière de l’axe de rotation tout en respectant les contraintes de surface, de rayon, de fabricabilité et de régularité.</p><div class="case-equation">E = ½ Iω² &nbsp;&nbsp; et &nbsp;&nbsp; I = ∫ r² dm<small>À vitesse angulaire fixée, une meilleure répartition de la masse augmente l’énergie stockée par l’intermédiaire du moment d’inertie.</small></div></section>
+        <section class="case-section" id="method"><span>02 / Méthode</span><h2>Plusieurs représentations pour un même objectif physique.</h2><p>La géométrie est exprimée par plusieurs paramétrisations complémentaires afin de comparer leur comportement numérique plutôt que de dépendre d’une configuration unique.</p><ul><li>Des cas analytiques de référence fournissent des bornes interprétables.</li><li>Les descriptions de Fourier et polynomiales génèrent des formes lisses de faible dimension.</li><li>Les formulations polaires et 3D explorent des géométries plus générales.</li><li>Les solveurs bornés et en région de confiance sont comparés sur la convergence et le respect des contraintes.</li></ul><figure class="case-figure"><img src="../../assets/flywheel-shapes.png" alt="Comparaison de l’inertie d’un anneau et d’un disque"><figcaption>Référence analytique : concentrer la masse près du rayon extérieur augmente l’inertie.</figcaption></figure></section>
+        <section class="case-section" id="results"><span>03 / Résultats numériques</span><h2>La convergence est évaluée, pas supposée.</h2><figure class="case-figure"><img src="../../fig_convergence.png" alt="Comparaison des méthodes numériques pour l’optimisation du volant"><figcaption>Comparaison de la convergence numérique entre paramétrisations et solveurs.</figcaption></figure><p>L’analyse compare l’amélioration de l’objectif, la vitesse de convergence, la sensibilité à l’initialisation et le respect des contraintes. Les configurations instables ou physiquement peu pertinentes sont documentées au même titre que les résultats concluants.</p></section>
+        <section class="case-section" id="experiment"><span>04 / Expérience</span><h2>Un véhicule miniature relie le modèle au mouvement observable.</h2><p>Deux configurations sont comparées à partir de trajectoires suivies. L’expérience reste volontairement modeste : elle vérifie si la tendance physique prédite est visible, sans prétendre démontrer un gain universel.</p><figure class="case-figure"><img src="../../assets/flywheel-tracker.webp" alt="Suivi de mouvement pour l’expérience du volant d’inertie"><figcaption>Extraction des trajectoires utilisée pour comparer les configurations du véhicule miniature.</figcaption></figure><div class="case-note"><strong>Limite d’interprétation</strong><p>L’expérience dépend de la résistance au roulement, de l’alignement, des conditions de lâcher et de l’incertitude de mesure. Ces facteurs sont documentés plutôt que masqués derrière un indicateur unique.</p></div></section>
+        <section class="case-section" id="evidence"><span>05 / Preuves</span><h2>Un dépôt reproductible.</h2><div class="evidence-list"><a href="https://github.com/Hamza-67/flywheel-shape-optimization" target="_blank" rel="noreferrer"><span>Dépôt</span><strong>Code source, tests, dictionnaire de données et scripts de reproductibilité</strong><em>↗</em></a><a href="https://github.com/Hamza-67/flywheel-shape-optimization/blob/main/reports/portfolio_report.pdf" target="_blank" rel="noreferrer"><span>Rapport portfolio</span><strong>Rapport technique synthétique en anglais</strong><em>↗</em></a><a href="https://github.com/Hamza-67/flywheel-shape-optimization/blob/main/reports/technical_report.pdf" target="_blank" rel="noreferrer"><span>Rapport technique</span><strong>Document détaillé de modélisation et validation</strong><em>↗</em></a></div></section>
+        <a class="case-next" href="thepnlab.html"><span>Projet suivant</span><strong>ThePnLab →</strong></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

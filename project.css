@@ -1,6 +1,10 @@
 .project-page { background: var(--paper-light); }
 .project-page .site-header { position: relative; }
 .project-back { font-size: 11px; font-weight: 800; color: var(--navy); }
+.project-header-actions { display: flex; align-items: center; gap: 20px; }
+.project-header-actions .language-switch { flex: 0 0 auto; }
+.project-header-actions .language-switch a { min-width: 30px; padding: 6px 7px; text-align: center; color: var(--ink-soft); font-size: 9px; font-weight: 800; letter-spacing: .08em; }
+.project-header-actions .language-switch a.active { color: white; background: var(--navy); }
 .case-shell { max-width: 1180px; margin: 0 auto; padding: 80px 6vw 110px; }
 .case-eyebrow { display: flex; justify-content: space-between; gap: 25px; margin-bottom: 28px; color: var(--navy-2); font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .13em; }
 .case-hero h1 { max-width: 1020px; margin: 0; font: 400 clamp(52px,7vw,100px)/.94 var(--serif); letter-spacing: -.055em; }
@@ -55,6 +59,8 @@
 }
 
 @media (max-width: 620px) {
+  .project-header-actions { gap: 9px; }
+  .project-back { max-width: 110px; font-size: 9px; }
   .case-shell { padding: 55px 22px 80px; }
   .case-hero h1 { font-size: 48px; }
   .case-deck, .case-links { margin-left: 0; }

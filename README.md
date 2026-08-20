@@ -1,6 +1,6 @@
 # Hamza Houir Alami — Engineering Portfolio
 
-Personal portfolio for graduate applications and Summer 2027 recruiting, focused on optimization, artificial intelligence, operations research, and industrial systems.
+Personal bilingual portfolio for graduate applications and Summer 2027 recruiting, focused on optimization, artificial intelligence, operations research, and industrial systems.
 
 ## Positioning
 
@@ -24,11 +24,13 @@ Selected work is intentionally limited to projects with a clear problem, individ
 The published site is a dependency-free static website:
 
 - `index.html` — primary portfolio page
+- `fr/` — complete French version of the homepage and case studies
 - `styles.css` — responsive visual system
 - `projects/` — detailed project case studies
 - `project.css` — shared case-study layout
 - `404.html` — custom fallback page
 - `assets/` — optimized experience and technical figures
+- `assets/Hamza_Houir_Alami_CV.pdf` — downloadable current résumé
 - `reports/` — selected public portfolio reports
 
 Open `index.html` directly or serve the repository with any static HTTP server.

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analyse d’une aile de planeur — Hamza Houir Alami</title>
+  <meta name="description" content="Étude de cas : analyse aérodynamique et structurale d’une aile de planeur.">
+  <link rel="alternate" hreflang="en" href="https://hamza-67.github.io/projects/glider.html"><link rel="alternate" hreflang="fr" href="https://hamza-67.github.io/fr/projects/glider.html">
+  <link rel="stylesheet" href="../../styles.css?v=7"><link rel="stylesheet" href="../../project.css?v=2">
+</head>
+<body class="project-page">
+  <header class="site-header"><a class="brand" href="../index.html"><span>HHA</span><strong>Hamza Houir Alami</strong></a><div class="project-header-actions"><a class="project-back" href="../index.html#work">← Tous les projets</a><span class="language-switch" aria-label="Langue"><a href="/projects/glider.html" lang="en">EN</a><a class="active" href="/fr/projects/glider.html" aria-current="page">FR</a></span></div></header>
+  <main class="case-shell">
+    <section class="case-hero">
+      <div class="case-eyebrow"><span>Aérodynamique &amp; structures · Étude d’ingénierie</span><span>2025–2026</span></div>
+      <h1>Analyse aérodynamique et structurale d’une aile de planeur</h1>
+      <p class="case-deck">Une étude couplée allant du dimensionnement analytique de l’aile à la vérification CFD et par éléments finis, réalisée en collaboration avec Étienne Roy.</p>
+      <div class="case-links"><a class="button button-primary" href="../../reports/glider-report.pdf" target="_blank">Rapport en anglais <span>↗</span></a><a class="button button-secondary" href="#method">Explorer la méthode <span>↓</span></a></div>
+    </section>
+    <section class="case-facts" aria-label="Informations sur le projet">
+      <div><span>Modèle</span><p>Aile de planeur · profil Clark Y</p></div><div><span>Aérodynamique</span><p>Ligne portante de Prandtl · STAR-CCM+</p></div><div><span>Structures</span><p>Analyse par éléments finis Abaqus</p></div><div><span>Contribution</span><p>Modélisation, simulation et rapport</p></div>
+    </section>
+    <div class="case-body">
+      <nav class="case-toc" aria-label="Sections de l’étude"><a href="#problem">Problème</a><a href="#method">Méthode</a><a href="#cfd">CFD</a><a href="#fea">Éléments finis</a><a href="#evidence">Preuves</a></nav>
+      <div class="case-content">
+        <section class="case-section" id="problem"><span>01 / Problème</span><h2>Dimensionner une aile crédible aérodynamiquement et défendable structurellement.</h2><p>Le projet relie plusieurs niveaux de fidélité. Les outils analytiques établissent la géométrie et les chargements de premier ordre, la CFD vérifie le champ d’écoulement et les coefficients aérodynamiques, puis l’analyse par éléments finis évalue la réponse structurelle sous les cas de charge obtenus.</p></section>
+        <section class="case-section" id="method"><span>02 / Méthode</span><h2>Un processus de vérification progressif.</h2><div class="case-pipeline" aria-label="Méthode d’analyse du planeur"><span>Exigences</span><i>→</i><span>Dimensionnement</span><i>→</i><span>Ligne portante</span><i>→</i><span>CFD</span><i>→</i><span>Éléments finis</span></div><ol><li>Sélectionner le profil et définir la géométrie de référence et les conditions de vol.</li><li>Utiliser la théorie de la ligne portante de Prandtl pour le chargement spanwise et les performances de premier ordre.</li><li>Construire un cas STAR-CCM+ pour étudier la pression et le champ d’écoulement.</li><li>Transférer un chargement représentatif vers un modèle structural Abaqus.</li><li>Comparer les résultats entre méthodes et documenter les limites des modèles.</li></ol></section>
+        <section class="case-section" id="cfd"><span>03 / CFD</span><h2>Analyse numérique de l’écoulement autour du profil sélectionné.</h2><figure class="case-figure"><img src="../../assets/glider-cfd.png" alt="Champ de pression CFD autour du profil du planeur"><figcaption>Champ de pression STAR-CCM+ autour du profil sélectionné dans les conditions de simulation documentées.</figcaption></figure><p>L’étape CFD fournit une vision plus détaillée de la distribution de pression et du sillage que le modèle analytique, tout en restant dépendante du maillage, du modèle de turbulence et des conditions aux limites.</p></section>
+        <section class="case-section" id="fea"><span>04 / Analyse structurale</span><h2>Vérification de la structure de l’aile par éléments finis.</h2><figure class="case-figure"><img src="../../assets/glider-fea.png" alt="Champ de contraintes Abaqus dans l’aile du planeur"><figcaption>Champ de contraintes équivalentes Abaqus pour le cas de charge structural.</figcaption></figure><p>Le modèle éléments finis vérifie la distribution des contraintes et les déplacements sous un chargement aérodynamique représentatif. Les résultats sont interprétés en tenant compte de l’idéalisation des conditions aux limites et des hypothèses matériau.</p></section>
+        <section class="case-section" id="evidence"><span>05 / Preuves</span><h2>Rapport technique.</h2><div class="evidence-list"><a href="../../reports/glider-report.pdf" target="_blank"><span>Rapport en anglais</span><strong>Analyse aérodynamique, dimensionnement structural, résultats et limites</strong><em>↗</em></a><div><span>Collaboration</span><strong>Réalisé avec Étienne Roy ; encadrants mentionnés dans le rapport</strong><em>✓</em></div></div></section>
+        <a class="case-next" href="speech-recognition.html"><span>Retour au premier projet</span><strong>Reconnaissance des nombres français →</strong></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
