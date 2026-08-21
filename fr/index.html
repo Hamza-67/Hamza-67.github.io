@@ -15,7 +15,7 @@
   <link rel="alternate" hreflang="en" href="https://hamza-67.github.io/">
   <link rel="alternate" hreflang="fr" href="https://hamza-67.github.io/fr/">
   <link rel="alternate" hreflang="x-default" href="https://hamza-67.github.io/">
-  <link rel="stylesheet" href="../styles.css?v=7">
+  <link rel="stylesheet" href="../styles.css?v=8">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,7 +45,7 @@
       <div class="hero-copy">
         <div class="status-pill"><i></i> Ouvert aux opportunités pour l’été 2027</div>
         <p class="kicker">Étudiant ingénieur · Arts et Métiers</p>
-        <h1>Étudiant ingénieur, j’améliore les décisions industrielles.</h1>
+        <h1>Étudiant ingénieur, je construis des modèles à l’épreuve du terrain.</h1>
         <p class="hero-lead">Je travaille à l’intersection du génie industriel, de la mécanique, de l’optimisation et de l’IA appliquée — pour transformer des problèmes opérationnels en modèles, expériences et outils d’aide à la décision.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#work">Découvrir mes projets <span>↘</span></a>
@@ -83,6 +83,7 @@
             <h3>Stagiaire en génie industriel</h3><p class="experience-org">Safran Nacelles</p>
             <p>Immersion en méthodes outillage, fabrication d’entrées d’air et assemblage de nacelles, puis développement d’un modèle d’allocation sous contraintes pour réduire le temps de cycle d’assemblage.</p>
             <strong>Optimisation convexe · SLSQP · plafonds par opération · validation Monte-Carlo sur 5 000 simulations</strong>
+            <a class="experience-case-link" href="projects/safran-optimization.html">Lire l’étude de cas Safran <span>↗</span></a>
           </div>
         </article>
 
@@ -93,9 +94,9 @@
           </figure>
           <div class="experience-card-copy">
             <div class="experience-meta"><span>Été 2026</span><span>Rabat, Maroc</span></div>
-            <h3>Stagiaire en recherche IA</h3><p class="experience-org">UM6P AI Lab</p>
-            <p>Contribution à un cycle de recherche appliquée couvrant la revue de littérature, la préparation des données, le développement de modèles, l’expérimentation et l’analyse.</p>
-            <strong>État de l’art · pipeline de données · expérimentations · rédaction scientifique</strong>
+            <h3>Stagiaire IA &amp; recherche opérationnelle</h3><p class="experience-org">UM6P AI Lab</p>
+            <p>Développement d’un prototype d’aide à la décision pour les stocks IT, combinant contrôles de qualité des données, prévisions en origine glissante et simulation de politiques sur 60 séries département–équipement.</p>
+            <strong>9 modèles de prévision · 6 politiques de réapprovisionnement · validation synthétique : –21,2 % de coût total modélisé et –92,5 % d’unités d’urgence vs achats réactifs</strong>
           </div>
         </article>
 
@@ -107,7 +108,7 @@
           <div class="experience-card-copy">
             <div class="experience-meta"><span>2026–2027</span><span>Lille &amp; Paris, France</span></div>
             <h3>Responsable Développement Commercial &amp; Partenariats</h3><p class="experience-org">AMJE Lille</p>
-            <p>Pilotage d’une équipe commerciale de 15 personnes, qualification de besoins industriels, cadrage de missions de conseil et coordination des propositions et du suivi client.</p>
+            <p>Pilotage de 15 business managers chargés de l’acquisition client, de la qualification des projets, des propositions commerciales et du suivi de missions d’ingénierie et de conseil.</p>
             <strong>27 k€ signés en 3 mois · 10 missions contractualisées · base CRM passée de 600 à 1 600 contacts</strong>
           </div>
         </article>
@@ -119,36 +120,44 @@
         <p>02 / Projets sélectionnés</p><h2>Des projets que vous pouvez examiner.</h2><span>Des résultats, graphiques et preuves concrètes dès la page d’accueil. Chaque projet donne accès à la méthode complète, aux résultats, au rapport et au dépôt lorsqu’ils sont publics.</span>
       </div>
       <div class="project-showcase">
-        <a class="project-feature" href="projects/speech-recognition.html">
+        <a class="project-feature" href="projects/safran-optimization.html">
+          <figure class="project-feature-media project-feature-photo">
+            <img src="../assets/experience-safran.jpg" alt="Environnement d’assemblage de nacelles d’avion Safran Nacelles" loading="lazy">
+            <figcaption>Assemblage de nacelles Gulfstream G700 · allocation sous contraintes du temps de cycle</figcaption>
+          </figure>
+          <div class="project-feature-copy"><div class="project-feature-meta"><span>01 · Optimisation industrielle</span><b>Étude de cas</b></div><h3>Optimisation du temps de cycle chez Safran Nacelles</h3><p>Un modèle d’allocation sous contraintes répartissant une réduction théorique du temps de cycle entre les opérations d’assemblage, sans ignorer les limites process et qualité.</p><ul><li>148 → 146 h</li><li>SLSQP</li><li>5 000 scénarios</li></ul><strong>Examiner la méthode industrielle et le test de robustesse <em>↗</em></strong></div>
+        </a>
+
+        <a class="project-feature project-feature-reverse project-feature-cnn" href="projects/speech-recognition.html">
           <figure class="project-feature-media project-feature-graphic">
             <img src="../assets/cnn-mel-pipeline.svg" alt="Onde audio transformée en spectrogramme mel puis décodée par un CNN" loading="lazy">
             <figcaption>Audio → spectrogramme mel 64 bandes → CNN → décodeur contraint 0–99</figcaption>
           </figure>
-          <div class="project-feature-copy"><div class="project-feature-meta"><span>01 · Apprentissage automatique</span><b>Étude de cas</b></div><h3>Reconnaissance des nombres français de 0 à 99</h3><p>Un système compact de reconnaissance vocale reposant sur 23 composants acoustiques réutilisables, un classifieur CNN et un décodeur linguistique reconstruisant des nombres français valides.</p><ul><li>23 composants acoustiques</li><li>64 bandes mel</li><li>Décodage contraint</li></ul><strong>Explorer le modèle, le pipeline et ses limites <em>↗</em></strong></div>
+          <div class="project-feature-copy"><div class="project-feature-meta"><span>02 · Apprentissage automatique</span><b>Étude de cas</b></div><h3>Reconnaissance des nombres français de 0 à 99</h3><p>Un système compact de reconnaissance vocale reposant sur 23 composants acoustiques réutilisables, un classifieur CNN et un décodeur linguistique reconstruisant des nombres français valides.</p><ul><li>23 composants acoustiques</li><li>64 bandes mel</li><li>Décodage contraint</li></ul><strong>Explorer le modèle, le pipeline et ses limites <em>↗</em></strong></div>
         </a>
 
-        <a class="project-feature project-feature-reverse" href="projects/flywheel.html">
+        <a class="project-feature" href="projects/flywheel.html">
           <figure class="project-feature-media project-feature-graphic">
             <img src="../assets/flywheel-shapes.png" alt="Comparaison de géométries optimisées de volant d’inertie" loading="lazy">
             <figcaption>Familles de géométries optimisées comparées sous des contraintes identiques</figcaption>
           </figure>
-          <div class="project-feature-copy"><div class="project-feature-meta"><span>02 · Optimisation de forme</span><b>Rapport + GitHub</b></div><h3>Optimisation de la forme d’un volant d’inertie</h3><p>Une étude analytique, numérique et expérimentale de l’influence de la géométrie sur l’inertie de rotation sous contraintes de masse, de rayon et de fabricabilité.</p><ul><li>Modèle analytique</li><li>Solveur numérique</li><li>Suivi expérimental</li></ul><strong>Voir les graphiques, le rapport et le code source <em>↗</em></strong></div>
+          <div class="project-feature-copy"><div class="project-feature-meta"><span>03 · Optimisation de forme</span><b>Rapport + GitHub</b></div><h3>Optimisation de la forme d’un volant d’inertie</h3><p>Une étude analytique, numérique et expérimentale de l’influence de la géométrie sur l’inertie de rotation sous contraintes de masse, de rayon et de fabricabilité.</p><ul><li>Modèle analytique</li><li>Solveur numérique</li><li>Suivi expérimental</li></ul><strong>Voir les graphiques, le rapport et le code source <em>↗</em></strong></div>
         </a>
 
-        <a class="project-feature" href="projects/thepnlab.html">
+        <a class="project-feature project-feature-reverse" href="projects/thepnlab.html">
           <figure class="project-feature-media project-feature-photo">
             <img src="../assets/thepnlab-cover.jpg" alt="Interface de la plateforme de simulation ThePnLab" loading="lazy">
             <figcaption>Produit de simulation financière intégrant logique de portefeuille et coaching explicable</figcaption>
           </figure>
-          <div class="project-feature-copy"><div class="project-feature-meta"><span>03 · Logiciel d’aide à la décision</span><b>Produit + GitHub + rapport</b></div><h3>ThePnLab</h3><p>Une plateforme fonctionnelle de paper trading combinant le suivi automatisé des portefeuilles, des cycles de marché planifiés et une couche de coaching explicable fondée sur le RAG.</p><ul><li>FastAPI</li><li>PostgreSQL</li><li>Coaching RAG</li></ul><strong>Ouvrir le produit et l’étude de cas technique <em>↗</em></strong></div>
+          <div class="project-feature-copy"><div class="project-feature-meta"><span>04 · Logiciel d’aide à la décision</span><b>Produit + GitHub + rapport</b></div><h3>ThePnLab</h3><p>Une plateforme fonctionnelle de paper trading combinant le suivi automatisé des portefeuilles, des cycles de marché planifiés et une couche de coaching explicable fondée sur le RAG.</p><ul><li>FastAPI</li><li>PostgreSQL</li><li>Coaching RAG</li></ul><strong>Ouvrir le produit et l’étude de cas technique <em>↗</em></strong></div>
         </a>
 
-        <a class="project-feature project-feature-reverse" href="projects/glider.html">
+        <a class="project-feature" href="projects/glider.html">
           <figure class="project-feature-media project-feature-graphic project-feature-dark">
             <img src="../assets/glider-cfd.png" alt="Distribution de pression STAR-CCM+ autour d’une aile de planeur" loading="lazy">
             <figcaption>Champ de pression STAR-CCM+ utilisé pour valider le modèle aérodynamique</figcaption>
           </figure>
-          <div class="project-feature-copy"><div class="project-feature-meta"><span>04 · Aérodynamique &amp; structures</span><b>Rapport d’ingénierie</b></div><h3>Analyse d’une aile de planeur</h3><p>Une étude pluridisciplinaire reliant la théorie de la ligne portante, la simulation CFD, l’analyse par éléments finis et le post-traitement Python.</p><ul><li>Modèle de Prandtl</li><li>STAR-CCM+</li><li>Abaqus EF</li></ul><strong>Examiner les simulations et le rapport d’ingénierie <em>↗</em></strong></div>
+          <div class="project-feature-copy"><div class="project-feature-meta"><span>05 · Aérodynamique &amp; structures</span><b>Rapport d’ingénierie</b></div><h3>Analyse d’une aile de planeur</h3><p>Une étude pluridisciplinaire reliant la théorie de la ligne portante, la simulation CFD, l’analyse par éléments finis et le post-traitement Python.</p><ul><li>Modèle de Prandtl</li><li>STAR-CCM+</li><li>Abaqus EF</li></ul><strong>Examiner les simulations et le rapport d’ingénierie <em>↗</em></strong></div>
         </a>
       </div>
     </section>
@@ -179,8 +188,16 @@
       <div class="graduate-note"><span>Projet académique</span><p>Recherche opérationnelle, génie industriel, supply chain et systèmes d’ingénierie — avec une priorité donnée aux modèles capables de résister aux contraintes du terrain.</p></div>
     </section>
 
+    <section class="section leadership-section" id="leadership">
+      <div class="section-heading"><p>04 / Leadership</p><h2>Rendre les parcours d’ingénierie plus lisibles.</h2><span>Une initiative personnelle mêlant mentorat, écriture et conseils pratiques pour les étudiants qui changent de système éducatif.</span></div>
+      <article class="initiative-card">
+        <div class="initiative-index"><span>PASSERELLE</span><b>En développement · FR / EN</b></div>
+        <div class="initiative-copy"><h3>Un guide bilingue d’orientation dans l’enseignement supérieur.</h3><p>Je développe PASSERELLE pour les étudiants marocains qui préparent leurs études en France. Le guide transforme les questions récurrentes du mentorat en une ressource structurée sur les choix académiques, la transition vers la France, les méthodes de travail, le logement, le budget et la vie étudiante.</p><ul><li>Mentorat</li><li>Rédaction bilingue</li><li>Orientation pratique</li><li>Initiative communautaire</li></ul></div>
+      </article>
+    </section>
+
     <section class="contact-section" id="contact">
-      <p>04 / Contact</p><h2>Travaillons sur un problème qui mérite d’être modélisé.</h2><p class="contact-copy">Je recherche un stage pour l’été 2027 en opérations, supply chain, stratégie industrielle, optimisation ou IA appliquée.</p>
+      <p>05 / Contact</p><h2>Travaillons sur un problème qui mérite d’être modélisé.</h2><p class="contact-copy">Je recherche un stage pour l’été 2027 en opérations, supply chain, stratégie industrielle, optimisation ou IA appliquée.</p>
       <div class="contact-actions"><a class="button button-light" href="mailto:h.houir.alami@gmail.com">h.houir.alami@gmail.com <span>↗</span></a><a href="../assets/Hamza_Houir_Alami_CV.pdf" download>Télécharger mon CV ↓</a><a href="https://github.com/Hamza-67" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://fr.linkedin.com/in/hamza-houir-alami-016a88372" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
     </section>
   </main>

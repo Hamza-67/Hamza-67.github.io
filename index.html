@@ -15,7 +15,7 @@
   <link rel="alternate" hreflang="en" href="https://hamza-67.github.io/">
   <link rel="alternate" hreflang="fr" href="https://hamza-67.github.io/fr/">
   <link rel="alternate" hreflang="x-default" href="https://hamza-67.github.io/">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -45,7 +45,7 @@
       <div class="hero-copy">
         <div class="status-pill"><i></i> Open to Summer 2027 opportunities</div>
         <p class="kicker">Engineering Student · Arts et Métiers</p>
-        <h1>Engineering student building better industrial decisions.</h1>
+        <h1>Engineering student building models that survive operational reality.</h1>
         <p class="hero-lead">I work across industrial engineering, mechanical engineering, optimization, and applied AI — turning operational problems into models, experiments, and decision-support tools.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#work">Explore selected work <span>↘</span></a>
@@ -83,6 +83,7 @@
             <h3>Industrial Engineering Intern</h3><p class="experience-org">Safran Nacelles</p>
             <p>Worked across tooling methods, air-inlet manufacturing, and nacelle assembly, then developed a constrained allocation model for reducing assembly cycle time.</p>
             <strong>Convex allocation · SLSQP · operation-level caps · 5,000-run Monte Carlo validation</strong>
+            <a class="experience-case-link" href="projects/safran-optimization.html">Read the Safran case study <span>↗</span></a>
           </div>
         </article>
 
@@ -93,9 +94,9 @@
           </figure>
           <div class="experience-card-copy">
             <div class="experience-meta"><span>Summer 2026</span><span>Rabat, Morocco</span></div>
-            <h3>AI Research Intern</h3><p class="experience-org">UM6P AI Lab</p>
-            <p>Contributed to an applied research workflow spanning literature review, data preparation, model development, experimentation, and analysis.</p>
-            <strong>Research review · data pipeline · model experiments · scientific reporting</strong>
+            <h3>AI &amp; Operations Research Intern</h3><p class="experience-org">UM6P AI Lab</p>
+            <p>Built an IT-inventory decision-support prototype combining data-quality controls, rolling-origin forecasting, and inventory-policy simulation across 60 department–item series.</p>
+            <strong>9 forecasting models · 6 replenishment policies · synthetic validation: 21.2% lower modeled total cost and 92.5% fewer emergency units vs. reactive purchasing</strong>
           </div>
         </article>
 
@@ -107,7 +108,7 @@
           <div class="experience-card-copy">
             <div class="experience-meta"><span>2026–2027</span><span>Lille &amp; Paris, France</span></div>
             <h3>Head of Business Development &amp; Partnerships</h3><p class="experience-org">AMJE Lille</p>
-            <p>Lead a 15-person business team, qualify industrial needs, scope consulting engagements, and coordinate proposals and client follow-up.</p>
+            <p>Lead 15 business managers responsible for client acquisition, project qualification, commercial proposals, and client follow-up across engineering and consulting engagements.</p>
             <strong>€27k signed in 3 months · 10 client engagements signed · CRM expanded from 600 to 1,600 contacts</strong>
           </div>
         </article>
@@ -119,36 +120,44 @@
         <p>02 / Selected work</p><h2>Projects you can inspect.</h2><span>Real figures, engineering outputs, and product evidence on the homepage. Open any project for the full method, results, report, and repository when public.</span>
       </div>
       <div class="project-showcase">
-        <a class="project-feature" href="projects/speech-recognition.html">
+        <a class="project-feature" href="projects/safran-optimization.html">
+          <figure class="project-feature-media project-feature-photo">
+            <img src="assets/experience-safran.jpg" alt="Safran Nacelles aircraft nacelle assembly environment" loading="lazy">
+            <figcaption>Gulfstream G700 nacelle assembly · constrained cycle-time allocation</figcaption>
+          </figure>
+          <div class="project-feature-copy"><div class="project-feature-meta"><span>01 · Industrial optimization</span><b>Case study</b></div><h3>Safran Nacelles Cycle-Time Optimization</h3><p>A constrained allocation model for distributing a theoretical cycle-time reduction across nacelle assembly operations without ignoring process and quality limits.</p><ul><li>148 → 146 h</li><li>SLSQP</li><li>5,000 scenarios</li></ul><strong>Inspect the industrial method and robustness test <em>↗</em></strong></div>
+        </a>
+
+        <a class="project-feature project-feature-reverse project-feature-cnn" href="projects/speech-recognition.html">
           <figure class="project-feature-media project-feature-graphic">
             <img src="assets/cnn-mel-pipeline.svg" alt="Audio waveform transformed into a mel-spectrogram and decoded by a CNN" loading="lazy">
             <figcaption>Audio → 64-bin mel-spectrogram → CNN → constrained 0–99 decoder</figcaption>
           </figure>
-          <div class="project-feature-copy"><div class="project-feature-meta"><span>01 · Machine learning</span><b>Case study</b></div><h3>French Number Recognition from 0 to 99</h3><p>A compact speech-recognition system built from 23 reusable acoustic components, a CNN classifier, and a linguistic decoder that reconstructs valid French numbers.</p><ul><li>23 acoustic components</li><li>64 mel bins</li><li>Constrained decoding</li></ul><strong>Explore the model, pipeline, and limitations <em>↗</em></strong></div>
+          <div class="project-feature-copy"><div class="project-feature-meta"><span>02 · Machine learning</span><b>Case study</b></div><h3>French Number Recognition from 0 to 99</h3><p>A compact speech-recognition system built from 23 reusable acoustic components, a CNN classifier, and a linguistic decoder that reconstructs valid French numbers.</p><ul><li>23 acoustic components</li><li>64 mel bins</li><li>Constrained decoding</li></ul><strong>Explore the model, pipeline, and limitations <em>↗</em></strong></div>
         </a>
 
-        <a class="project-feature project-feature-reverse" href="projects/flywheel.html">
+        <a class="project-feature" href="projects/flywheel.html">
           <figure class="project-feature-media project-feature-graphic">
             <img src="assets/flywheel-shapes.png" alt="Comparison of optimized flywheel geometries" loading="lazy">
             <figcaption>Optimized geometry families compared under identical constraints</figcaption>
           </figure>
-          <div class="project-feature-copy"><div class="project-feature-meta"><span>02 · Shape optimization</span><b>Report + GitHub</b></div><h3>Flywheel Shape Optimization</h3><p>An analytical, numerical, and experimental study of how geometry changes rotational inertia while respecting mass, radius, and manufacturability constraints.</p><ul><li>Analytical model</li><li>Numerical solver</li><li>Experimental tracker</li></ul><strong>See the figures, report, and source code <em>↗</em></strong></div>
+          <div class="project-feature-copy"><div class="project-feature-meta"><span>03 · Shape optimization</span><b>Report + GitHub</b></div><h3>Flywheel Shape Optimization</h3><p>An analytical, numerical, and experimental study of how geometry changes rotational inertia while respecting mass, radius, and manufacturability constraints.</p><ul><li>Analytical model</li><li>Numerical solver</li><li>Experimental tracker</li></ul><strong>See the figures, report, and source code <em>↗</em></strong></div>
         </a>
 
-        <a class="project-feature" href="projects/thepnlab.html">
+        <a class="project-feature project-feature-reverse" href="projects/thepnlab.html">
           <figure class="project-feature-media project-feature-photo">
             <img src="assets/thepnlab-cover.jpg" alt="ThePnLab paper-trading product interface" loading="lazy">
             <figcaption>Live paper-trading product with portfolio logic and explainable coaching</figcaption>
           </figure>
-          <div class="project-feature-copy"><div class="project-feature-meta"><span>03 · Decision software</span><b>Live + GitHub + report</b></div><h3>ThePnLab</h3><p>A working paper-trading platform combining automated portfolio tracking, scheduled market updates, and an explainable RAG-based coaching layer.</p><ul><li>FastAPI</li><li>PostgreSQL</li><li>RAG coaching</li></ul><strong>Open the live product and technical case study <em>↗</em></strong></div>
+          <div class="project-feature-copy"><div class="project-feature-meta"><span>04 · Decision software</span><b>Live + GitHub + report</b></div><h3>ThePnLab</h3><p>A working paper-trading platform combining automated portfolio tracking, scheduled market updates, and an explainable RAG-based coaching layer.</p><ul><li>FastAPI</li><li>PostgreSQL</li><li>RAG coaching</li></ul><strong>Open the live product and technical case study <em>↗</em></strong></div>
         </a>
 
-        <a class="project-feature project-feature-reverse" href="projects/glider.html">
+        <a class="project-feature" href="projects/glider.html">
           <figure class="project-feature-media project-feature-graphic project-feature-dark">
             <img src="assets/glider-cfd.png" alt="STAR-CCM+ pressure distribution around a glider wing" loading="lazy">
             <figcaption>STAR-CCM+ pressure field used to validate the aerodynamic model</figcaption>
           </figure>
-          <div class="project-feature-copy"><div class="project-feature-meta"><span>04 · Aerodynamics &amp; structures</span><b>Engineering report</b></div><h3>Glider Wing Analysis</h3><p>A cross-disciplinary study connecting lifting-line theory, CFD simulation, finite-element analysis, and Python post-processing.</p><ul><li>Prandtl model</li><li>STAR-CCM+</li><li>Abaqus FEA</li></ul><strong>Inspect the simulations and engineering report <em>↗</em></strong></div>
+          <div class="project-feature-copy"><div class="project-feature-meta"><span>05 · Aerodynamics &amp; structures</span><b>Engineering report</b></div><h3>Glider Wing Analysis</h3><p>A cross-disciplinary study connecting lifting-line theory, CFD simulation, finite-element analysis, and Python post-processing.</p><ul><li>Prandtl model</li><li>STAR-CCM+</li><li>Abaqus FEA</li></ul><strong>Inspect the simulations and engineering report <em>↗</em></strong></div>
         </a>
       </div>
     </section>
@@ -179,8 +188,16 @@
       <div class="graduate-note"><span>Graduate direction</span><p>Operations research, industrial engineering, supply chain, and engineering systems — with an emphasis on models that survive contact with operational reality.</p></div>
     </section>
 
+    <section class="section leadership-section" id="leadership">
+      <div class="section-heading"><p>04 / Leadership</p><h2>Engineering knowledge should remain navigable.</h2><span>A personal initiative connecting mentorship, writing, and practical guidance for students crossing educational systems.</span></div>
+      <article class="initiative-card">
+        <div class="initiative-index"><span>PASSERELLE</span><b>In development · EN / FR</b></div>
+        <div class="initiative-copy"><h3>A bilingual higher-education orientation guide.</h3><p>I am developing PASSERELLE for Moroccan students preparing to study in France. The guide turns recurring mentoring questions into a structured resource covering academic choices, the transition to France, study methods, housing, budgeting, and student life.</p><ul><li>Mentorship</li><li>Bilingual writing</li><li>Practical orientation</li><li>Community initiative</li></ul></div>
+      </article>
+    </section>
+
     <section class="contact-section" id="contact">
-      <p>04 / Contact</p><h2>Let’s work on a problem worth modeling.</h2><p class="contact-copy">I am looking for a Summer 2027 internship in operations, supply chain, industrial strategy, optimization, or applied AI.</p>
+      <p>05 / Contact</p><h2>Let’s work on a problem worth modeling.</h2><p class="contact-copy">I am looking for a Summer 2027 internship in operations, supply chain, industrial strategy, optimization, or applied AI.</p>
       <div class="contact-actions"><a class="button button-light" href="mailto:h.houir.alami@gmail.com">h.houir.alami@gmail.com <span>↗</span></a><a href="assets/Hamza_Houir_Alami_CV.pdf" download>Download CV ↓</a><a href="https://github.com/Hamza-67" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://fr.linkedin.com/in/hamza-houir-alami-016a88372" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
     </section>
   </main>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Safran Nacelles Cycle-Time Optimization — Hamza Houir Alami</title>
+  <meta name="description" content="Case study: constrained cycle-time optimization and Monte Carlo robustness analysis for aircraft nacelle assembly.">
+  <link rel="alternate" hreflang="en" href="https://hamza-67.github.io/projects/safran-optimization.html"><link rel="alternate" hreflang="fr" href="https://hamza-67.github.io/fr/projects/safran-optimization.html">
+  <link rel="stylesheet" href="../styles.css?v=8"><link rel="stylesheet" href="../project.css?v=3">
+</head>
+<body class="project-page">
+  <header class="site-header"><a class="brand" href="../index.html"><span>HHA</span><strong>Hamza Houir Alami</strong></a><div class="project-header-actions"><a class="project-back" href="../index.html#work">← All selected work</a><span class="language-switch" aria-label="Language"><a class="active" href="/projects/safran-optimization.html" aria-current="page">EN</a><a href="/fr/projects/safran-optimization.html" lang="fr">FR</a></span></div></header>
+  <main class="case-shell">
+    <section class="case-hero">
+      <div class="case-eyebrow"><span>Industrial optimization · Case 01</span><span>Summer 2026</span></div>
+      <h1>Safran Nacelles Cycle-Time Optimization</h1>
+      <p class="case-deck">A constrained optimization study for allocating a theoretical cycle-time reduction across Gulfstream G700 nacelle assembly operations, with uncertainty tested through 5,000 Monte Carlo scenarios.</p>
+      <div class="case-links"><a class="button button-primary" href="#method">Explore the method <span>↓</span></a><a class="button button-secondary" href="mailto:h.houir.alami@gmail.com?subject=Safran%20Nacelles%20optimization%20case">Request a non-confidential walkthrough <span>↗</span></a></div>
+    </section>
+    <section class="case-facts" aria-label="Project facts">
+      <div><span>Industrial context</span><p>Gulfstream G700 nacelle assembly</p></div><div><span>Modeled objective</span><p>148 h → 146 h theoretical cycle time</p></div><div><span>Optimization</span><p>Convex allocation · SLSQP</p></div><div><span>Robustness</span><p>5,000 Monte Carlo scenarios</p></div>
+    </section>
+    <div class="case-body">
+      <nav class="case-toc" aria-label="Case study sections"><a href="#problem">Problem</a><a href="#method">Method</a><a href="#robustness">Robustness</a><a href="#result">Result</a><a href="#evidence">Evidence</a></nav>
+      <div class="case-content">
+        <section class="case-section" id="problem"><span>01 / Problem</span><h2>A global target is not yet an operational improvement plan.</h2><p>Reducing an assembly cycle requires deciding where improvement effort can be allocated while respecting operation-level feasibility, process dependencies, and quality constraints. Applying the same reduction everywhere would ignore the structure of the routing and create targets that some operations cannot absorb.</p><figure class="case-figure case-figure-cover"><img src="../assets/experience-safran.jpg" alt="Safran Nacelles technician working on an aircraft nacelle"><figcaption>Safran Nacelles production environment in Morocco. The public case presents the decision method without disclosing internal process data.</figcaption></figure></section>
+        <section class="case-section" id="method"><span>02 / Method</span><h2>Translate an industrial objective into a constrained allocation model.</h2><div class="case-pipeline" aria-label="Safran optimization workflow"><span>Routing data</span><i>→</i><span>Operation caps</span><i>→</i><span>Convex model</span><i>→</i><span>SLSQP</span><i>→</i><span>Feasible allocation</span></div><ol><li>Structure operation times, improvement opportunities, and process constraints in a reproducible Excel/Python workflow.</li><li>Represent the total cycle-time objective as an allocation problem rather than a uniform percentage cut.</li><li>Impose operation-level bounds so the solver cannot assign unrealistic reductions.</li><li>Solve the constrained problem with SLSQP and check feasibility against the documented limits.</li></ol></section>
+        <section class="case-section" id="robustness"><span>03 / Robustness</span><h2>Test whether the allocation survives operational uncertainty.</h2><p>A deterministic optimum can be fragile when durations vary. A 5,000-scenario Monte Carlo simulation perturbed the modeled conditions and evaluated how consistently the proposed allocation preserved the target and constraints.</p><div class="case-note"><strong>Interpretation boundary</strong><p>The simulation evaluates robustness within the modeled assumptions. It does not convert a theoretical allocation into a realized production gain without implementation and shop-floor measurement.</p></div></section>
+        <section class="case-section" id="result"><span>04 / Result</span><h2>A defensible theoretical path from 148 to 146 hours.</h2><p>The model identified a feasible distribution of improvement effort corresponding to a two-hour theoretical cycle-time reduction. The value of the work is not only the headline target: it is the traceable connection between each allocated reduction, its constraint, and its sensitivity to uncertainty.</p></section>
+        <section class="case-section" id="evidence"><span>05 / Evidence</span><h2>Public method, protected industrial data.</h2><div class="evidence-list"><div><span>Method</span><strong>Problem formulation, solver logic, constraints, and robustness protocol documented on this page</strong><em>✓</em></div><div><span>Result status</span><strong>148 → 146 hours is a theoretical modeled reduction, not a claimed realized factory KPI</strong><em>✓</em></div><div><span>Confidentiality</span><strong>Raw operational data, internal parameters, and company documents are not published</strong><em>✓</em></div><a href="mailto:h.houir.alami@gmail.com?subject=Safran%20Nacelles%20optimization%20case"><span>Walkthrough</span><strong>Request a discussion limited to non-confidential material</strong><em>↗</em></a></div></section>
+        <a class="case-next" href="speech-recognition.html"><span>Next case study</span><strong>French Number Recognition →</strong></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

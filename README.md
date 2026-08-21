@@ -14,10 +14,13 @@ Selected work is intentionally limited to projects with a clear problem, individ
 
 ## Selected work
 
+- Safran Nacelles cycle-time optimization
 - French number recognition from 0 to 99
 - Flywheel shape optimization
 - ThePnLab decision-support platform
 - Glider aerodynamic and structural study
+
+PASSERELLE, a bilingual mentorship and higher-education orientation initiative, appears in the leadership section.
 
 ## Site structure
 

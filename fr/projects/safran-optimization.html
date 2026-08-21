@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Optimisation du temps de cycle chez Safran Nacelles — Hamza Houir Alami</title>
+  <meta name="description" content="Étude de cas : optimisation sous contraintes du temps de cycle et analyse de robustesse Monte-Carlo pour l’assemblage de nacelles aéronautiques.">
+  <link rel="alternate" hreflang="en" href="https://hamza-67.github.io/projects/safran-optimization.html"><link rel="alternate" hreflang="fr" href="https://hamza-67.github.io/fr/projects/safran-optimization.html">
+  <link rel="stylesheet" href="../../styles.css?v=8"><link rel="stylesheet" href="../../project.css?v=3">
+</head>
+<body class="project-page">
+  <header class="site-header"><a class="brand" href="../index.html"><span>HHA</span><strong>Hamza Houir Alami</strong></a><div class="project-header-actions"><a class="project-back" href="../index.html#work">← Tous les projets</a><span class="language-switch" aria-label="Langue"><a href="/projects/safran-optimization.html" lang="en">EN</a><a class="active" href="/fr/projects/safran-optimization.html" aria-current="page">FR</a></span></div></header>
+  <main class="case-shell">
+    <section class="case-hero">
+      <div class="case-eyebrow"><span>Optimisation industrielle · Étude de cas 01</span><span>Été 2026</span></div>
+      <h1>Optimisation du temps de cycle chez Safran Nacelles</h1>
+      <p class="case-deck">Une étude d’optimisation sous contraintes pour répartir une réduction théorique du temps de cycle entre les opérations d’assemblage de nacelles du Gulfstream G700, avec 5 000 scénarios Monte-Carlo pour tester l’incertitude.</p>
+      <div class="case-links"><a class="button button-primary" href="#method">Explorer la méthode <span>↓</span></a><a class="button button-secondary" href="mailto:h.houir.alami@gmail.com?subject=Etude%20Safran%20Nacelles">Demander une présentation non confidentielle <span>↗</span></a></div>
+    </section>
+    <section class="case-facts" aria-label="Informations sur le projet">
+      <div><span>Contexte industriel</span><p>Assemblage de nacelles Gulfstream G700</p></div><div><span>Objectif modélisé</span><p>148 h → 146 h de temps de cycle théorique</p></div><div><span>Optimisation</span><p>Allocation convexe · SLSQP</p></div><div><span>Robustesse</span><p>5 000 scénarios Monte-Carlo</p></div>
+    </section>
+    <div class="case-body">
+      <nav class="case-toc" aria-label="Sections de l’étude"><a href="#problem">Problème</a><a href="#method">Méthode</a><a href="#robustness">Robustesse</a><a href="#result">Résultat</a><a href="#evidence">Preuves</a></nav>
+      <div class="case-content">
+        <section class="case-section" id="problem"><span>01 / Problème</span><h2>Un objectif global n’est pas encore un plan d’amélioration opérationnel.</h2><p>Réduire un cycle d’assemblage exige de décider où l’effort d’amélioration peut être alloué tout en respectant la faisabilité de chaque opération, les dépendances du processus et les contraintes qualité. Appliquer la même réduction partout ignorerait la structure de la gamme et imposerait des objectifs que certaines opérations ne peuvent absorber.</p><figure class="case-figure case-figure-cover"><img src="../../assets/experience-safran.jpg" alt="Technicien Safran Nacelles travaillant sur une nacelle d’avion"><figcaption>Environnement de production Safran Nacelles au Maroc. L’étude publique présente la méthode de décision sans divulguer les données internes du processus.</figcaption></figure></section>
+        <section class="case-section" id="method"><span>02 / Méthode</span><h2>Transformer un objectif industriel en problème d’allocation sous contraintes.</h2><div class="case-pipeline" aria-label="Démarche d’optimisation Safran"><span>Données de gamme</span><i>→</i><span>Plafonds opérationnels</span><i>→</i><span>Modèle convexe</span><i>→</i><span>SLSQP</span><i>→</i><span>Allocation faisable</span></div><ol><li>Structurer les temps d’opération, les opportunités d’amélioration et les contraintes process dans un workflow Excel/Python reproductible.</li><li>Représenter l’objectif de temps de cycle comme un problème d’allocation, et non comme une réduction uniforme.</li><li>Imposer des bornes par opération afin d’empêcher le solveur d’attribuer des gains irréalistes.</li><li>Résoudre le problème avec SLSQP puis contrôler la faisabilité par rapport aux limites documentées.</li></ol></section>
+        <section class="case-section" id="robustness"><span>03 / Robustesse</span><h2>Vérifier si l’allocation résiste à l’incertitude opérationnelle.</h2><p>Un optimum déterministe peut être fragile lorsque les durées varient. Une simulation Monte-Carlo de 5 000 scénarios a perturbé les conditions modélisées et mesuré la capacité de l’allocation proposée à préserver l’objectif et les contraintes.</p><div class="case-note"><strong>Limite d’interprétation</strong><p>La simulation évalue la robustesse dans le cadre des hypothèses du modèle. Elle ne transforme pas un résultat théorique en gain de production réalisé sans mise en œuvre et mesure en atelier.</p></div></section>
+        <section class="case-section" id="result"><span>04 / Résultat</span><h2>Une trajectoire théorique défendable de 148 à 146 heures.</h2><p>Le modèle a identifié une répartition faisable de l’effort d’amélioration correspondant à deux heures de réduction théorique du temps de cycle. La valeur du travail ne tient pas seulement à la cible : elle réside dans le lien traçable entre chaque réduction allouée, sa contrainte et sa sensibilité à l’incertitude.</p></section>
+        <section class="case-section" id="evidence"><span>05 / Preuves</span><h2>Méthode publique, données industrielles protégées.</h2><div class="evidence-list"><div><span>Méthode</span><strong>Formulation, logique du solveur, contraintes et protocole de robustesse documentés sur cette page</strong><em>✓</em></div><div><span>Statut du résultat</span><strong>148 → 146 heures est une réduction théorique modélisée, pas un KPI usine réalisé</strong><em>✓</em></div><div><span>Confidentialité</span><strong>Les données opérationnelles, paramètres internes et documents de l’entreprise ne sont pas publiés</strong><em>✓</em></div><a href="mailto:h.houir.alami@gmail.com?subject=Etude%20Safran%20Nacelles"><span>Présentation</span><strong>Demander un échange limité aux éléments non confidentiels</strong><em>↗</em></a></div></section>
+        <a class="case-next" href="speech-recognition.html"><span>Étude suivante</span><strong>Reconnaissance des nombres français →</strong></a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
