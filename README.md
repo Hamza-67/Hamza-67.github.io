@@ -4,11 +4,10 @@ Personal bilingual portfolio for graduate applications and Summer 2027 recruitin
 
 ## Positioning
 
-The site presents one coherent engineering profile across four settings:
+The site presents one coherent engineering profile across three settings:
 
 - industrial engineering: Safran Nacelles;
 - applied AI and operations research: UM6P IT Department;
-- product-data transformation: Decathlon;
 - business development and partnerships: AMJE Lille.
 
 Selected work is intentionally limited to projects with a clear problem, individual contribution, method, validation, and limitations.
