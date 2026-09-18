@@ -4,23 +4,24 @@ Personal bilingual portfolio for graduate applications and Summer 2027 recruitin
 
 ## Positioning
 
-The site presents one coherent engineering profile across three settings:
+The site presents one coherent engineering profile across four settings:
 
-- industry: Safran Nacelles;
-- applied AI research: UM6P AI Lab;
-- business leadership: AMJE Lille.
+- industrial engineering: Safran Nacelles;
+- applied AI and operations research: UM6P IT Department;
+- product-data transformation: Decathlon;
+- business development and partnerships: AMJE Lille.
 
 Selected work is intentionally limited to projects with a clear problem, individual contribution, method, validation, and limitations.
 
 ## Selected work
 
-- Safran Nacelles cycle-time optimization
-- French number recognition from 0 to 99
-- Flywheel shape optimization
-- ThePnLab decision-support platform
-- Glider aerodynamic and structural study
+- IT inventory decision support
+- compositional French speech recognition from 0 to 99
+- flywheel shape optimization and braking dynamics
+- independent nacelle assembly allocation study
+- glider aerodynamic and structural study
 
-PASSERELLE, a bilingual mentorship and higher-education orientation initiative, appears in the leadership section.
+The leadership section covers corporate relations, STEM outreach, tutoring, and mentorship.
 
 ## Site structure
 

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Inventory decision-support pipeline</title>
+  <desc id="desc">A four-stage pipeline from validated data to rolling forecasts, inventory simulation, and policy recommendations.</desc>
+  <rect width="1200" height="700" fill="#0d2940"/>
+  <g fill="none" stroke="#c8e2ed" stroke-width="3" opacity=".85">
+    <path d="M265 350h70m230 0h70m230 0h70"/>
+    <path d="m320 335 15 15-15 15m300-30 15 15-15 15m300-30 15 15-15 15"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <g transform="translate(55 220)"><rect width="210" height="260" rx="10" fill="#f4f1e9"/><text x="105" y="78" fill="#5d9fbe" font-size="18" font-weight="700">01</text><text x="105" y="125" fill="#0d2940" font-size="24" font-weight="700">Validated</text><text x="105" y="158" fill="#0d2940" font-size="24" font-weight="700">data</text><text x="105" y="205" fill="#4a5964" font-size="16">60 series</text></g>
+    <g transform="translate(355 220)"><rect width="210" height="260" rx="10" fill="#f4f1e9"/><text x="105" y="78" fill="#5d9fbe" font-size="18" font-weight="700">02</text><text x="105" y="125" fill="#0d2940" font-size="24" font-weight="700">Rolling</text><text x="105" y="158" fill="#0d2940" font-size="24" font-weight="700">forecasts</text><text x="105" y="205" fill="#4a5964" font-size="16">9 models</text></g>
+    <g transform="translate(655 220)"><rect width="210" height="260" rx="10" fill="#f4f1e9"/><text x="105" y="78" fill="#5d9fbe" font-size="18" font-weight="700">03</text><text x="105" y="125" fill="#0d2940" font-size="24" font-weight="700">Inventory</text><text x="105" y="158" fill="#0d2940" font-size="24" font-weight="700">simulation</text><text x="105" y="205" fill="#4a5964" font-size="16">6 policies</text></g>
+    <g transform="translate(955 220)"><rect width="210" height="260" rx="10" fill="#c8df87"/><text x="105" y="78" fill="#0d2940" font-size="18" font-weight="700">04</text><text x="105" y="125" fill="#0d2940" font-size="24" font-weight="700">Policy</text><text x="105" y="158" fill="#0d2940" font-size="24" font-weight="700">recommendation</text><text x="105" y="205" fill="#0d2940" font-size="16">cost · service</text></g>
+  </g>
+</svg>
